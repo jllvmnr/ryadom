@@ -1,0 +1,77 @@
+.footer {
+    background-color: #0f0f0f;
+    color: #ccc;
+    padding: 40px 20px;
+    font-size: 0.95em;
+    font-family: "Nunito", sans-serif;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.footer-section-title {
+    color: white;
+    margin-bottom: 15px;
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+.footer-link {
+    color: #ccc;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 8px;
+    transition: color 0.2s;
+}
+
+.footer-link:hover {
+    color: #5b88b2;
+}
+
+.footer-logo {
+    color: #5b88b2;
+    font-size: 1.5em;
+    font-weight: 700;
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.footer-brand-section {
+    flex-basis: 250px;
+}
+
+.footer-contacts-section {
+    flex-basis: 200px;
+}
+
+.footer-contacts-section a {
+    display: inline; 
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 30px 15px; 
+    }
+
+    .footer-container {
+        flex-direction: column; 
+        gap: 35px; 
+    }
+
+    .footer-brand-section, 
+    .footer-contacts-section {
+        flex-basis: auto; 
+    }
+
+    .footer-link {
+        padding: 4px 0; 
+    }
+}
