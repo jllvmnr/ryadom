@@ -12,15 +12,18 @@ const Navbar = () => {
         alert('Вы вышли из системы!');
         navigate('/');
     };
-    
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navPages = document.querySelector('.pages');
 
-    menuToggle.addEventListener('click', () => {
-        menuToggle.classList.toggle('is-active');
-        navPages.classList.toggle('is-active');
+    document.addEventListener('DOMContentLoaded', () => {
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navPages = document.querySelector('.pages');
+
+        if (menuToggle && navPages) { 
+            menuToggle.addEventListener('click', () => {
+                menuToggle.classList.toggle('is-active');
+                navPages.classList.toggle('is-active');
+            });
+        }
     });
-
     return (
         <div>
             <nav className="navbar">
