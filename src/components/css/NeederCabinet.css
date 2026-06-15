@@ -281,3 +281,114 @@
 .empty-state a:hover {
     text-decoration: underline;
 }
+
+@media (max-width: 768px) {
+    .needer-cabinet-bg {
+        padding-top: 90px; 
+        padding-bottom: 60px;
+    }
+
+    .cabinet-bg-text {
+        display: none !important;
+    }
+
+    .cabinet-container {
+        padding: 0 20px; 
+    }
+
+    .cabinet-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 25px;
+        margin-bottom: 35px;
+        padding-bottom: 25px;
+    }
+
+    .user-welcome {
+        width: 100%;
+    }
+
+    .create-btn-cabinet {
+        width: 100%;
+        text-align: center;
+        padding: 14px 20px;
+        font-size: 10px;
+    }
+
+    .cabinet-tabs {
+        overflow-x: auto;
+        white-space: nowrap;
+        margin-bottom: 30px;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .cabinet-tabs::-webkit-scrollbar {
+        display: none;
+    }
+    .cabinet-tabs {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .tab-btn {
+        padding: 12px 20px;
+        font-size: 10px;
+        flex-shrink: 0;
+    }
+
+    .requests-list-cabinet {
+        gap: 25px; 
+    }
+
+    .card-top-bar {
+        padding: 15px 20px;
+        flex-direction: column; 
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .delete-req-btn {
+        width: 100%; 
+        text-align: center;
+        padding: 8px;
+    }
+
+    .card-body-cabinet {
+        padding: 20px; 
+    }
+
+    .card-body-cabinet h3 {
+        font-size: 1.3rem; 
+        margin-bottom: 10px;
+    }
+
+    .req-desc {
+        font-size: 0.9rem;
+    }
+
+    .responses-section {
+        margin-top: 25px;
+        padding-top: 20px;
+    }
+
+    .responses-grid {
+        grid-template-columns: 1fr; 
+        gap: 15px;
+    }
+
+    .response-item {
+        padding: 20px;
+    }
+
+    .vol-info strong {
+        font-size: 1rem;
+    }
+
+    .vol-message {
+        margin-bottom: 20px;
+    }
+    
+    .accept-vol-btn {
+        padding: 14px; 
+    }
+}
