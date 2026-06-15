@@ -55,7 +55,7 @@
     opacity: 0.6;
 }
 
-.meta-tag{
+.meta-tag {
     color: #dcdcdc;
 }
 
@@ -156,4 +156,84 @@
     text-transform: uppercase;
     letter-spacing: 2px;
     color: rgba(255, 255, 255, 0.3);
+}
+
+/* --- Адаптация --- */
+@media (max-width: 768px) {
+    .portal-layout {
+        flex-direction: column;
+        padding-top: 60px;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .bg-text-vector {
+        font-size: 25vw;
+        bottom: 5%;
+        display: none;
+    }
+
+    .hero-section {
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 40px;
+        padding-bottom: 60px;
+        min-height: auto;
+    }
+
+    .main-image-frame {
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: none;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+
+    .main-image-frame img {
+        filter: grayscale(100%) brightness(0.25);
+        opacity: 0.4;
+    }
+
+    .description-text {
+        max-width: 100%;
+        font-size: 0.9rem;
+    }
+
+    .side-navigation {
+        width: 100%;
+        border-left: none;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .nav-panel {
+        padding: 30px 20px;
+    }
+
+    .panel-label {
+        font-size: 1.25rem;
+        max-width: 80%;
+    }
+
+    .panel-arrow::after {
+        bottom: 50%;
+        transform: translateY(50%);
+        right: 20px;
+        font-size: 1.5rem;
+    }
+
+    .nav-panel:hover .panel-arrow::after {
+        transform: translateY(50%);
+    }
+
+    .internal-portal-bottom {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        margin-top: 40px;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
 }
