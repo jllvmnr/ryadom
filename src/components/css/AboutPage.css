@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Inter:wght@300;400;600&display=swap');
+
+.about-page-container {
+    background-color: #0f0f0f;
+    min-height: 100vh;
+    width: 100%;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    position: relative;
+    overflow-x: hidden;
+    padding-top: 120px;
+    padding-bottom: 100px;
+}
+
+.about-bg-text {
+    position: fixed;
+    top: 20%;
+    right: -5%;
+    font-size: 20vw;
+    font-family: 'Syncopate', sans-serif;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.02);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.about-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 40px;
+    position: relative;
+    z-index: 1;
+}
+
+.about-meta {
+    font-family: 'Syncopate';
+    font-size: 10px;
+    letter-spacing: 4px;
+    color: #5b88b2;
+}
+
+.about-title {
+    font-family: 'Syncopate', sans-serif;
+    font-size: clamp(2rem, 5vw, 4rem);
+    line-height: 1.1;
+    margin: 20px 0 80px 0;
+}
+
+.outline-text {
+    -webkit-text-stroke: 1px white;
+    color: transparent;
+}
+
+.about-section {
+    margin-bottom: 100px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s ease;
+}
+
+.is-loaded .about-section {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.section-grid {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 40px;
+}
+
+.section-title-box h2 {
+    font-family: 'Syncopate';
+    font-size: 0.9rem;
+    color: #5b88b2;
+}
+
+.section-text-box p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 300;
+}
+
+.lead-text {
+    font-size: 1.5rem !important;
+    color: white !important;
+    font-weight: 400 !important;
+}
+
+.values-section h2 {
+    font-family: 'Syncopate';
+    font-size: 0.9rem;
+    color: #5b88b2;
+    margin-bottom: 40px;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.value-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    transition: 0.4s ease;
+}
+
+.value-card:hover {
+    background: #5b88b2;
+    border-color: #5b88b2;
+}
+
+.value-card h3 {
+    font-family: 'Syncopate';
+    font-size: 0.8rem;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.value-card p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.value-card:hover p {
+    color: white;
+}
+
+.about-cta {
+    margin-top: 50px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 60px;
+    text-align: center;
+}
+
+.cta-link {
+    font-family: 'Syncopate';
+    font-size: 1.2rem;
+    color: white;
+    text-decoration: none;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+
+.cta-link:hover {
+    color: #5b88b2;
+}
+
+.cta-link .arrow {
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.cta-link:hover .arrow {
+    transform: translate(10px, -10px);
+}
+
+@media (max-width: 800px) {
+    .section-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .about-title {
+        font-size: 2.5rem;
+    }
+}

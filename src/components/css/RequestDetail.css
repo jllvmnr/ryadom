@@ -1,0 +1,135 @@
+.bg2 {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding-top: 60px;
+}
+
+.requestDetail {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 32px;
+  background: #fff;
+  border-radius: 14px;
+  border: 1px solid rgba(71, 31, 103, 0.2);
+  box-shadow: 0 6px 18px rgba(71, 31, 103, 0.1);
+  font-family: "Inter", sans-serif;
+  color: #2e2e2e;
+}
+
+.back-link {
+  display: inline-block;
+  color: #5b88b2ea;
+  text-decoration: none;
+  margin-bottom: 24px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: opacity 0.2s;
+}
+
+.back-link:hover {
+  opacity: 0.7;
+}
+
+.requestDetail h1 {
+  margin: 0 0 12px 0;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #5b88b2ea;
+}
+
+.status-open,
+.status-closed {
+  display: inline-block;
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+.status-open {
+  color: #fff;
+  background: rgba(83, 196, 26, 0.405);
+}
+
+.status-closed {
+  color: #fff;
+  background: rgba(244, 67, 54, 0.18);
+}
+
+.request-description {
+  margin: 16px 0;
+  padding: 14px 16px;
+  background: rgba(71, 31, 103, 0.05);
+  border-left: 4px solid #5b88b2ea;
+  border-radius: 6px;
+  line-height: 1.55;
+  color: #444;
+}
+
+.requestDetail h3 {
+  margin: 28px 0 12px 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #5b88b2ea;
+}
+
+.contact-info p {
+  margin: 4px 0;
+  color: #333;
+}
+
+.contact-info strong {
+  color: #5b88b2ea;
+  font-weight: 600;
+  display: inline-block;
+  width: 90px;
+}
+
+.publish-date small {
+  display: block;
+  margin-top: 22px;
+  color: #777;
+  padding-top: 14px;
+  border-top: 1px dashed rgba(71, 31, 103, 0.2);
+}
+
+.take-request-btn {
+  width: 40%;
+  padding: 14px 20px;
+  margin-top: 36px;
+  background: #5b88b2ea;
+  color: #fff;
+  font-size: 1.05rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.12s ease, opacity 0.2s ease;
+}
+
+.take-request-btn:hover {
+  opacity: 0.9;
+}
+
+.take-request-btn:active {
+  transform: scale(0.97);
+}
+
+@media (max-width: 600px) {
+  .requestDetail {
+    padding: 22px;
+    margin: 20px 12px;
+  }
+
+  .requestDetail h1 {
+    font-size: 1.7rem;
+  }
+
+  .take-request-btn {
+    font-size: 1rem;
+    padding: 12px;
+  }
+}
