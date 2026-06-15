@@ -65,8 +65,7 @@
     border-radius: 20px;
     font-size: 12px;
 }
-
-.logout-button {
+.logout-button{
     background: rgba(255, 255, 255, 0.1);
     padding: 6px 15px;
     border-radius: 20px;
@@ -74,92 +73,56 @@
     color: #ffffff;
 }
 
-.menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    cursor: pointer;
-    flex-direction: column;
-    gap: 6px;
-    padding: 5px;
-    pointer-events: auto;
-}
-
-.menu-toggle span {
-    display: block;
-    width: 22px;
-    height: 2px;
-    background-color: #fff;
-    transition: 0.3s;
-}
-
 @media (max-width: 768px) {
     .navbar {
-        height: 70px;
+        height: 60px; 
     }
 
     .nav {
-        width: 92%;
-        padding: 0 20px;
-        height: 45px;
+        width: 95%;
+        height: 44px;
+        padding: 0 15px;
+        border-radius: 25px; 
+        gap: 15px;
     }
 
     .navbar-brand {
-        font-size: 12px;
+        font-size: 11px; 
+        flex-shrink: 0;  
     }
 
     .nav .pages {
-        position: fixed;
-        top: 80px;
-        left: 4%;
-        right: 4%;
-        flex-direction: column;
-        gap: 20px;
-        padding: 30px;
-        border-radius: 24px;
-        background-color: rgba(15, 15, 15, 0.95);
-        backdrop-filter: blur(20px);
-        -webkit-backdrop-filter: blur(20px);
-        border: 1px solid rgba(255, 255, 255, 0.05);
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
-
-        opacity: 0;
-        pointer-events: none;
-        transform: translateY(-10px);
-        transition: all 0.3s ease;
-        z-index: 999;
+        display: flex;
+        gap: 15px;
+        overflow-x: auto; 
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+        white-space: nowrap; 
+        width: 100%;
+        padding: 5px 0;
     }
 
-    .nav .pages.is-active {
-        opacity: 1;
-        pointer-events: auto;
-        transform: translateY(0);
+    .nav .pages::-webkit-scrollbar {
+        display: none;
+    }
+    .nav .pages {
+        -ms-overflow-style: none;  
+        scrollbar-width: none; 
     }
 
     .nav a {
-        font-size: 16px;
-        width: 100%;
-        text-align: center;
-        padding: 10px 0;
+        font-size: 12px;
+        display: inline-block;
+        flex-shrink: 0; 
     }
 
-    .login-button,
+    .login-button, 
     .logout-button {
-        font-size: 14px;
-        padding: 10px 24px;
-        width: 100%;
-        text-align: center;
+        font-size: 11px;
+        padding: 4px 10px;
     }
 
     .menu-toggle {
-        display: flex;
-    }
-
-    .menu-toggle.is-active span:nth-child(1) {
-        transform: translateY(4px) rotate(45deg);
-    }
-
-    .menu-toggle.is-active span:nth-child(2) {
-        transform: translateY(-4px) rotate(-45deg);
+        display: none !important;
     }
 }

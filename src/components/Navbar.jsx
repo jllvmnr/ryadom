@@ -1,26 +1,16 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { useAuth } from '../context/AuthContext';
+import { useAuth } from '../context/AuthContext'; 
 import './css/Navbar.css';
 
 const Navbar = () => {
-    const { role, logout, isAuthenticated } = useAuth();
+    const { role, logout, isAuthenticated } = useAuth(); 
     const navigate = useNavigate();
 
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
-
     const handleLogout = () => {
-        logout();
+        logout(); 
         alert('Вы вышли из системы!');
-        navigate('/');
-    };
-
-    const toggleMenu = () => {
-        setIsMenuOpen(!isMenuOpen);
-    };
-
-    const closeMenu = () => {
-        setIsMenuOpen(false);
+        navigate('/'); 
     };
 
     return (
@@ -30,13 +20,13 @@ const Navbar = () => {
                     <Link to="/" className="navbar-brand">
                         рядом.kg
                     </Link>
-                    <div className={`pages ${isMenuOpen ? 'is-active' : ''}`}>
+                    <div className='pages'>
                         <Link to="/">Главная</Link>
                         <Link to="/requests">Найти Помощь</Link>
                         <Link to="/faq">FAQ</Link>
                         <Link to="/about">О нас</Link>
-
-
+                        
+                        
                         {/* 1. Если зашел ВОЛОНТЕР */}
                         {role === 'VOLUNTEER' && (
                             <Link to="/volunteer/profile">Мои задания</Link>
@@ -58,8 +48,8 @@ const Navbar = () => {
                         {/* --- БЛОК АВТОРИЗАЦИИ (Вход / Выход) --- */}
                         {isAuthenticated ? (
                             <div className='auth-links'>
-                                <button
-                                    onClick={handleLogout}
+                                <button 
+                                    onClick={handleLogout} 
                                     className='logout-button'
                                 >
                                     Выход
@@ -71,16 +61,8 @@ const Navbar = () => {
                                 Вход
                             </Link>
                         )}
-
+                        
                     </div>
-                    <button
-                        className={`menu-toggle ${isMenuOpen ? 'is-active' : ''}`}
-                        aria-label="Toggle navigation"
-                        onClick={toggleMenu}
-                    >
-                        <span></span>
-                        <span></span>
-                    </button>
                 </div>
             </nav>
         </div>
