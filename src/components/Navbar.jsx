@@ -7,23 +7,22 @@ const Navbar = () => {
     const { role, logout, isAuthenticated } = useAuth();
     const navigate = useNavigate();
 
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
     const handleLogout = () => {
         logout();
         alert('Вы вышли из системы!');
         navigate('/');
     };
 
-    document.addEventListener('DOMContentLoaded', () => {
-        const menuToggle = document.querySelector('.menu-toggle');
-        const navPages = document.querySelector('.pages');
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
+    };
 
-        if (menuToggle && navPages) { 
-            menuToggle.addEventListener('click', () => {
-                menuToggle.classList.toggle('is-active');
-                navPages.classList.toggle('is-active');
-            });
-        }
-    });
+    const closeMenu = () => {
+        setIsMenuOpen(false);
+    };
+
     return (
         <div>
             <nav className="navbar">
@@ -31,7 +30,7 @@ const Navbar = () => {
                     <Link to="/" className="navbar-brand">
                         рядом.kg
                     </Link>
-                    <div className='pages'>
+                    <div className={`pages ${isMenuOpen ? 'is-active' : ''}`}>
                         <Link to="/">Главная</Link>
                         <Link to="/requests">Найти Помощь</Link>
                         <Link to="/faq">FAQ</Link>
@@ -74,7 +73,11 @@ const Navbar = () => {
                         )}
 
                     </div>
-                    <button class="menu-toggle" aria-label="Toggle navigation">
+                    <button
+                        className={`menu-toggle ${isMenuOpen ? 'is-active' : ''}`}
+                        aria-label="Toggle navigation"
+                        onClick={toggleMenu}
+                    >
                         <span></span>
                         <span></span>
                     </button>
