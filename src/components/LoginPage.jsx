@@ -81,9 +81,9 @@ const LoginPage = () => {
                 </header>
 
                 <div className="login-box">
-                    <div style={{ fontSize: '11px', color: '#888', marginBottom: '15px' }}>
-                        Тесты (пароль 123): <b>volunteer</b>, <b>needer</b>, <b>admin</b>
-                    </div>
+                    {/* <div style={{ fontSize: '11px', color: '#888', marginBottom: '15px' }}>
+                        Тесты: <b>volunteer</b>, <b>needer</b>, <b>admin</b>
+                    </div> */}
                     <form onSubmit={handleSubmit}>
                         {error && <div className="login-error-msg">{error}</div>}
 
